@@ -47,7 +47,7 @@
                 </label>
                 <label class="block p-1" for="DF">
                     <span class="label-primary">Date du formulaire</span>
-                    <input type="date" name="" id="DF" class="input-primary">
+                    <input type="date" value="" name="" id="DF" class="input-primary">
                 </label>
             </fieldset>
 
@@ -148,5 +148,11 @@
             </fieldset>
         </form>
     </main>
+    <!--Script A REVOIR!-->
+    <script>
+        let myDate = new Date()
+        console.log(myDate.getDay())
+        document.querySelector('#DF').value = `${myDate.getFullYear()}-${myDate.getMonth()}-${myDate.getDay()}`;
+    </script>
 </body>
 </html>
