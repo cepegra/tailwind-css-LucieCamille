@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .input-primary {
+              @apply mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded text-sm shadow-sm placeholder-slate-400 
+              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+              disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+              invalid:border-pink-500 invalid:text-pink-600
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500;
+            }
+
+            .input-radio {
+                @apply appearance-none rounded-full h-3 w-3 border border-orange-300 bg-white checked:bg-violet-700 checked:border-orange-500 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer;
+            }
+
+            .label-primary {
+                @apply block text-sm font-medium text-slate-700;
+            }
+        }
+  </style>
+  <style>
+    .child-bold label:nth-child(3)>span {
+        font-weight: bold;
+    }
+  </style>
+    <title>Index</title>
+</head>
+<body>
+    <main class="flex flex-col items-center p-3" >
+        <h1 class="text-xl my-1">Formulaire avec Tailwind</h1>
+        <form action="" class="min-w-[50%] my-1">
+            <!-- Fieldset context-->
+            <fieldset class="my-1">
+                <label class="block p-1" for="DE">
+                    <span class="label-primary">Date d'entrée</span>
+                    <input type="date" name="" id="DE" class="input-primary">
+                </label>
+                <label class="block p-1" for="DS">
+                    <span class="label-primary">Date de sortie</span>
+                    <input type="date" name="" id="DS" class="input-primary">
+                </label>
+                <label class="block p-1" for="DF">
+                    <span class="label-primary">Date du formulaire</span>
+                    <input type="date" name="" id="DF" class="input-primary">
+                </label>
+            </fieldset>
+
+            <!--Coordonnées-->
+            <fieldset class="my-1">
+                <label class="block p-1" for="centre">
+                    <span class="label-primary">Centre</span>
+                    <input type="text" name="" id="centre" class="input-primary">
+                </label>
+                <label class="block p-1" for="NF">
+                    <span class="label-primary">Nom du formateur</span>
+                    <input type="text" name="" id="NF" class="input-primary">
+                </label>
+                <label class="block p-1" for="PF">
+                    <span class="label-primary">Prénom du formateur</span>
+                    <input type="text" name="" id="PF" class="input-primary">
+                </label>
+                <label class="block p-1" for="NS">
+                    <span class="label-primary">Nom du stagiaire</span> 
+                    <input type="text" name="" id="NS"class="input-primary"> 
+                </label>
+                <label class="block p-1" for="PS">
+                    <span class="label-primary">Prénom du stagiaire</span> 
+                    <input type="text" name="" id="PS" class="input-primary">
+                </label>
+            </fieldset>
+
+            <!--Evaluation-->
+            <fieldset class="my-1">
+                <h2 class="text-lg">Evaluation</h2>
+                <h3 class="text-base italic text-slate-500">Réponds aux questions suivantes</h3>
+                <!--Question1-->
+                <article class="my-2">
+                    <p class="text-base">Lorem ipsum dolor sit amet?</p>
+                    <div class="grid grid-cols-2 child-bold">
+                        <label class="block flex items-center p-1" for="Q1R1">
+                            <span class="label-primary px-1">Lorem</span>
+                            <input type="radio" name="" id="Q1R1" class="input-radio">
+                        </label>
+                        <label class="block flex items-center p-1" for="Q1R2">
+                            <span class="label-primary px-1">ipsum</span>
+                            <input type="radio" name="" id="Q1R2" class="input-radio">
+                        </label>
+                        <label class="block flex items-center p-1" for="Q1R3">
+                            <span class="label-primary px-1">dolor</span>
+                            <input type="radio" name="" id="Q1R3" class="input-radio">
+                        </label>
+                        <label class="block flex items-center p-1" for="Q1R4">
+                            <span class="label-primary px-1">amet</span>
+                            <input type="radio" name="" id="Q1R4" class="input-radio">
+                        </label>
+                    </div>
+                </article>
+                <!--Question2-->
+                <article class="my-2">
+                    <p class="text-base">Lorem ipsum dolor sit amet?</p>
+                    <div class="grid grid-cols-2 child-bold">
+                        <label class="block flex items-center p-1" for="Q2R1">
+                            <span class="label-primary px-1">Lorem</span>
+                            <input type="radio" name="" id="Q2R1" class="input-radio">
+                        </label>
+                        <label class="block flex items-center p-1" for="Q2R2">
+                            <span class="label-primary px-1">ipsum</span>
+                            <input type="radio" name="" id="Q2R2" class="input-radio">
+                        </label>
+                        <label class="block flex items-center p-1" for="Q2R3">
+                            <span class="label-primary px-1">dolor</span>
+                            <input type="radio" name="" id="Q2R3" class="input-radio">
+                        </label>
+                        <label class="block flex items-center p-1" for="Q2R4">
+                            <span class="label-primary px-1">amet</span>
+                            <input type="radio" name="" id="Q2R4" class="input-radio">
+                        </label>
+                    </div>
+                </article>
+                <!--Question3-->
+                <article class="my-2">
+                    <p class="text-base">Lorem ipsum dolor sit amet?</p>
+                    <div class="grid grid-cols-2 child-bold">
+                        <label class="block flex items-center p-1" for="Q3R1">
+                            <span class="label-primary px-1">Lorem</span>
+                            <input type="radio" name="" id="Q3R1" class="input-radio">
+                        </label>
+                        <label class="block flex items-center p-1" for="Q3R2">
+                            <span class="label-primary px-1">ipsum</span>
+                            <input type="radio" name="" id="Q3R2" class="input-radio">
+                        </label>
+                        <label class="block flex items-center p-1" for="Q3R3">
+                            <span class="label-primary px-1">dolor</span>
+                            <input type="radio" name="" id="Q3R3" class="input-radio">
+                        </label>
+                        <label class="block flex items-center p-1" for="Q3R4">
+                            <span class="label-primary px-1">amet</span>
+                            <input type="radio" name="" id="Q3R4" class="input-radio">
+                        </label>
+                    </div>
+                </article>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
